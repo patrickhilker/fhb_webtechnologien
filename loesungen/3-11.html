@@ -2,8 +2,6 @@
 <html lang="de">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Aufgabe 3.11</title>
 
@@ -15,50 +13,10 @@
                 width: 100%;
             }
 
-            #stunde {
-
-                width: 10%;
-            }
-
-            #zeit {
-
-                width: 10%;
-            }
-
-            #montag,
-            #dienstag,
-            #mittwoch,
-            #donnerstag,
-            #freitag {
-
-                width: 16%;
-            }
-
-            td, th {
+            th, td {
 
                 border: 1px solid black;
-                padding: 5px;
-                text-align: center;
-            }
-
-            td:nth-child(2) {
-
-                text-align: right;
-            }
-
-            .webtechnologien {
-
-                background-color: palevioletred;
-            }
-
-            .ebusiness {
-
-                background-color: deepskyblue;
-            }
-
-            #mittagspause {
-
-                background-color: yellow;
+                padding: 10px;
             }
 
         </style>
@@ -73,13 +31,13 @@
             <thead>
 
                 <tr>
-                    <th id="stunde">Stunde</th>
-                    <th id="zeit">Zeit</th>
-                    <th id="montag">Montag</th>
-                    <th id="dienstag">Dienstag</th>
-                    <th id="mittwoch">Mittwoch</th>
-                    <th id="donnerstag">Donnerstag</th>
-                    <th id="freitag">Freitag</th>
+                    <th>Stunde</th>
+                    <th>Zeit</th>
+                    <th>Montag</th>
+                    <th>Dienstag</th>
+                    <th>Mittwoch</th>
+                    <th>Donnerstag</th>
+                    <th>Freitag</th>
                 </tr>
 
             </thead>
@@ -89,7 +47,7 @@
                     <td>1/2</td>
                     <td>8:00 - 9:30</td>
                     <td></td>
-                    <td rowspan="2" class="webtechnologien">Webtechnologien</td>
+                    <td rowspan="2">Webtechnologien</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -98,7 +56,7 @@
                 <tr>
                     <td>3/4</td>
                     <td>9:45 - 11:15</td>
-                    <td></td>
+                    <td>Produktion</td>
                     <!--<td></td>-->
                     <td></td>
                     <td></td>
@@ -108,7 +66,7 @@
                 <tr>
                     <td>5/6</td>
                     <td>11:30 - 13:00</td>
-                    <td></td>
+                    <td>Absatz</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -116,7 +74,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="7" id="mittagspause">Mittagspause</td>
+                    <td colspan="7">Mittagspause</td>
                 </tr>
 
                 <tr>
@@ -125,7 +83,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td class="ebusiness">eBusiness</td>
+                    <td>eBusiness</td>
                     <td></td>
                 </tr>
 
@@ -142,8 +100,6 @@
             </tbody>
 
         </table>
-
-        <!-- @todo die tabelle ist sicher noch ausbaufähig -->
 
     </body>
 </html>

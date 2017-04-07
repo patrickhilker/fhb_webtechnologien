@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Aufgabe 3.14</title>
+
+        <style>
+
+            label {
+
+                display: inline-block;
+                min-width: 100px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <p>Laden Sie hier Ihr Lieblingsfoto hoch!</p>
+
+        <form method="post" action="">
+
+            <fieldset>
+                <legend>Das bin ich</legend>
+
+                <p>
+                    <label for="vorname">Vorname</label>
+                    <input type="text" name="vorname" id="vorname">
+                </p>
+                <p>
+                    <label for="nachname">Nachname</label>
+                    <input type="text" name="nachname" id="nachname">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Hier ist mein Lieblingsfoto</legend>
+
+                <p>
+                    <input type="file" name="foto" id="foto" accept="image/*">
+                </p>
+            </fieldset>
+
+            <input type="submit">
+
+        </form>
+
+    </body>
+</html>
