@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Aufgabe 5.7</title>
+
+        <script>
+
+            // definition der klasse auto und ihrer methoden
+            function Auto(farbe, km, halter)
+            {
+                this.farbe = farbe;
+                this.kmstand = km;
+                this.halter = halter;
+                this.fahren = fahren;
+                this.print = print;
+                this.halterwechsel = halterwechsel;
+            }
+
+            // methode fahren
+            function fahren(kilometer)
+            {
+                this.kmstand += kilometer;
+                document.write(kilometer + " Kilometer gefahren<br><br>");
+            }
+
+            // methode print
+            function print() {
+
+                document.write("--------------------------------------<br>");
+                document.write("| <strong>Halter: " + this.halter.vorname + " " + this.halter.nachname + "</strong><br>");
+                document.write("| Farbe: " + this.farbe + "<br>");
+                document.write("| KM-Stand: " + this.kmstand + "<br>");
+                document.write("--------------------------------------<br><br>");
+            }
+
+            // methode halterwechsel
+            function halterwechsel(person) {
+
+                this.halter = person;
+                document.write("Neuer Halter: " + this.halter.vorname + " " + this.halter.nachname + "<br><br>");
+            }
+
+            // definition der klasse person
+            function Person(vorname, nachname) {
+
+                this.vorname = vorname;
+                this.nachname = nachname;
+            }
+
+            // erstellen der personen-objekte
+            var hbp = new Person("Hans", "Brandt-Pook");
+            var ph = new Person("Patrick", "Hilker");
+
+            // erstellen des auto-objektes
+            var fordfocus = new Auto("schwarz", 125000, ph);
+
+            fordfocus.print();
+
+            fordfocus.fahren(1000);
+            fordfocus.fahren(2500);
+            fordfocus.print();
+
+            fordfocus.halterwechsel(hbp);
+            fordfocus.print();
+
+            fordfocus.fahren(100);
+            fordfocus.print();
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

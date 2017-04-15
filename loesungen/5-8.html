@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Aufgabe 5.8</title>
+
+        <style>
+
+            body {
+
+                font-family: 'Verdana', sans-serif;
+            }
+
+            ul {
+
+                margin: 0;
+                padding: 0;
+            }
+
+            li {
+                display: inline-block;
+                border: 1px solid black;
+            }
+
+            a {
+                display: block;
+                padding: 5px;
+                color: black;
+            }
+
+        </style>
+
+        <script>
+
+            function seitentitel_aendern() {
+
+                document.title = document.Formular.title.value;
+            }
+
+            function hintergrund_aendern(color) {
+
+                document.bgColor = color;
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <h1>Dokument verändern</h1>
+
+        <form name="Formular">
+
+            <p>
+                <label for="title">Neuer Seitentitel:</label>
+                <input type="text" name="title" id="title">
+                <input type="button" value="Titel ändern" onclick="seitentitel_aendern()">
+            </p>
+
+            <!-- @todo abschicken des formulars mit enter verhindern ODER dann javascript ausführen -->
+
+        </form>
+
+        <h2>Neue Hintergrundfarbe:</h2>
+
+        <ul>
+            <li><a href="javascript:hintergrund_aendern('red')" style="background-color: red;">rot</a></li>
+            <li><a href="javascript:hintergrund_aendern('blue')" style="background-color: blue;">blau</a></li>
+            <li><a href="javascript:hintergrund_aendern('green')" style="background-color: green;">grün</a></li>
+            <li><a href="javascript:hintergrund_aendern('white')" style="background-color: white;">weiß</a></li>
+        </ul>
+
+        <script>
+
+            // nice to have:
+            // seitentitel auslesen und als startwert einfügen
+            // muss am ende stehen, da das formular sonst noch nicht definiert ist
+            document.Formular.title.value = document.title;
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Aufgabe 5.5</title>
+
+        <script>
+
+            function schaltjahr(jahr) {
+
+                // ohne rest durch vier teilbar
+                if(jahr % 4 != 0) {
+
+                    return false;
+                }
+
+                // wenn es eine jahrhundertwende ist, die nicht durch 400 teilbar ist
+                if(jahr % 100 == 0 && jahr % 400 != 0) {
+
+                    return false;
+                }
+
+                return true;
+            }
+
+            do {
+                jahr = parseInt(window.prompt("Jahreszahl"));
+            } while (isNaN(jahr));
+
+            if(schaltjahr(jahr)) {
+
+                document.write("Das Jahr " + jahr + " ist ein Schaltjahr.");
+            } else {
+
+                document.write("Das Jahr " + jahr + " ist kein Schaltjahr.");
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

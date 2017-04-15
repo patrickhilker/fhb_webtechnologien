@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Aufgabe 5.10</title>
+
+        <script>
+
+            // startzeitpunkt bestimmen
+            var startpunkt = new Date();
+
+            // emailadresse abfragen
+            var email = window.prompt("E-Mailadresse");
+            // @todo prüfen der e-mailadresse
+
+            // endzeitpunkt bestimmen
+
+            var endpunkt = new Date();
+
+            // dauer berechnen
+            var dauer = endpunkt.getTime() - startpunkt.getTime();
+
+            // dauer ausgeben
+            document.write("Zum Eingeben der E-Mailadresse haben Sie <strong>" + Math.round(dauer/10)/100 + " Sekunden</strong> benötigt.")
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

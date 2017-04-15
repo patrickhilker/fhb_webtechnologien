@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Aufgabe 5.2</title>
+
+        <script>
+
+            /* @todo verbesserung: mitarbeiterzahl nur abfragen, wenn jahre > 3 */
+
+            function beruf(jahre, mitarbeiter) {
+
+                if(jahre <= 1) {
+                    return "Juniorberater";
+                }
+
+                if(jahre <= 3) {
+                    return "Berater";
+                }
+
+                if(mitarbeiter == 0) {
+                    return "Seniorberater";
+                }
+
+                if(mitarbeiter <= 20) {
+                    return "Manager";
+                }
+
+                return "Direktor";
+            }
+
+            do {
+                var jahre = parseInt(window.prompt("Wie viele Jahre Berufserfahrung besitzen Sie?"));
+            } while (isNaN(jahre) || jahre < 0 || jahre > 40);
+
+            do {
+                var mitarbeiter = parseInt(window.prompt("Wie viele Mitarbeiter haben Sie?"));
+            } while (isNaN(mitarbeiter) || mitarbeiter < 0 || mitarbeiter > 650);
+
+            document.write("Sie sind ein " + beruf(jahre, mitarbeiter) + ".");
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Aufgabe 5.1</title>
+
+        <script>
+
+            var x = 5;
+            var y = 1.5;
+            var ergebnis = null;
+
+            document.write("<strong>Ausgangswerte:</strong>");
+            document.write("<br>x = ", x);
+            document.write("<br>y = ", y);
+            document.write("<br>ergebnis = ", ergebnis);
+
+            ergebnis = x + y;
+            document.write("<br><br><strong>ergebnis = x + y;</strong>");
+            document.write("<br>x = ", x);
+            document.write("<br>y = ", y);
+            document.write("<br>ergebnis = ", ergebnis);
+            document.write("<br>Begründung: einfache Addition");
+
+            x = 5;
+            y = 1.5;
+            ergebnis = x + ++y;
+            document.write("<br><br><strong>ergebnis = x + ++y;</strong>");
+            document.write("<br>x = ", x);
+            document.write("<br>y = ", y);
+            document.write("<br>ergebnis = ", ergebnis);
+            document.write("<br>Begründung: erst Erhöhung von y, dann Addition und zuweisen des Ergebnisses an ergebnis");
+
+            x = 5;
+            y = 1.5;
+            ergebnis = x + y++;
+            document.write("<br><br><strong>ergebnis = x + y++;</strong>");
+            document.write("<br>x = ", x);
+            document.write("<br>y = ", y);
+            document.write("<br>ergebnis = ", ergebnis);
+            document.write("<br>Begründung: erst Addition und zuweisen des Ergebnisses an ergebnis, dann Erhöhung von y");
+
+            x = 5;
+            y = 1.5;
+            x += 2;
+            document.write("<br><br><strong>x += 2;</strong>");
+            document.write("<br>x = ", x);
+            document.write("<br>y = ", y);
+            document.write("<br>Begründung: x += 2 ist eine Kurzschreibweise für x = x + 2");
+
+            x = 5;
+            y = 1.5;
+            x -= y;
+            document.write("<br><br><strong>x -= y;</strong>");
+            document.write("<br>x = ", x);
+            document.write("<br>y = ", y);
+            document.write("<br>Begründung: x -= y ist eine Kurzschreibweise für x = x - y");
+
+            x = 5;
+            y = 1.5;
+            x *= y--;
+            document.write("<br><br><strong>x *= y--;</strong>");
+            document.write("<br>x = ", x);
+            document.write("<br>y = ", y);
+            document.write("<br>Begründung: x *= y-- ist eine Kurzschreibweise für:<br> x = x * y;<br>y--;");
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

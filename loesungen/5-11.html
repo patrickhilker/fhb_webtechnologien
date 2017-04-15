@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Aufgabe 5.11</title>
+
+        <script>
+
+            // s. aufgabe 5.6
+            function bmi(cm, kg) {
+
+                // auf sinnvolle werte prüfen
+                if(cm < 50 || cm > 230 || kg < 30 || kg > 200) {
+                    return -1;
+                }
+
+                return kg / (cm * cm / 10000);
+            }
+
+            function bmi_form() {
+
+                var cm = document.bmi.groesse.value;
+                var kg = document.bmi.gewicht.value;
+
+                if(bmi(cm, kg) >= 0) {
+
+                    document.bmi.ergebnis.value = Math.round(bmi(cm, kg));
+                } else {
+
+                    document.bmi.ergebnis.value = 'Fehlerhafte Daten';
+                }
+            }
+
+            // @todo kenntlichmachen, dass das formular ausgewertet wurde
+            // @todo welches feld ist fehlerhaft?
+
+        </script>
+
+        <style>
+
+            body {
+
+                font-family: 'Verdana', sans-serif;
+                padding: 30px;
+            }
+
+            h1 {
+
+                margin: 0;
+            }
+
+            label, strong {
+
+                width: 150px;
+                display: inline-block;
+            }
+
+            #ergebnis {
+
+                margin-top: 30px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <h1>BMI berechnen</h1>
+
+        <p>Zur Berechnung Ihres <a href="https://de.wikipedia.org/wiki/Body-Mass-Index">BMI (body mass index)</a> benötigen wir folgende Angaben:</p>
+
+        <form name="bmi">
+
+            <p>
+                <label for="gewicht">Gewicht (KG)</label>
+                <input type="number" name="gewicht" id="gewicht" value="75">
+            </p>
+            <p>
+                <label for="groesse">Körpergröße (CM)</label>
+                <input type="number" name="groesse" id="groesse" value="183">
+
+                <!-- buttons -->
+                <input type="button" onClick="bmi_form()" value="BMI berechnen">
+                <input type="reset" value="Werte löschen">
+            </p>
+
+            <p id="ergebnis">
+                <strong>Ihr BMI beträgt</strong> <input type="text" disabled="disabled" name="ergebnis">
+            </p>
+
+        </form>
+
+    </body>
+</html>

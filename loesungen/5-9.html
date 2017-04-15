@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Aufgabe 5.9</title>
+
+        <script>
+
+            function isEmail(text) {
+
+                // @todo doku
+                if(!isNaN(text)) {
+                    return false;
+                }
+
+                // es muss ein @ enthalten sein
+                if(text.indexOf('@') == (-1)) {
+                    return false;
+                }
+
+                // es darf maximal ein @ geben
+                if(text.lastIndexOf("@") != text.indexOf("@")) {
+                    return false;
+                }
+
+                // es muss mindestens ein punkt enthalten sein
+                if(text.indexOf('.') == (-1)) {
+                    return false;
+                }
+
+                // leerzeichen sind verboten
+                if(text.indexOf(' ') != (-1)) {
+                    return false;
+                }
+
+
+                // position des letzten punktes berechnen
+                posPunkt = text.lastIndexOf('.');
+
+                // wie weit ist der punkt von ende entfernt? - index0 bei posPunkt beachten!
+                abstand = text.length - posPunkt - 1;
+
+                // @todo was ist mit neuen domainendungen? beschränken wir uns erstmal auf .de, .com, .org, ...
+                // der abstand muss >= 2 und <= 3 sein
+                if(abstand < 2 || abstand > 3) {
+                    return false;
+                }
+
+                /*
+                // länge der domain (teil zwischen "@" und letztem punkt) muss > 2 sein
+                // @todo was ist mit subdomains?
+                if (text.lastIndexOf(".") - text.indexOf("@") <= 2) {
+                    return false;
+                }
+
+                */
+
+                return true;
+            }
+
+            var testemails = [
+                "Mein.Name@abc.de",
+                "Mein.Name-abc.de",
+                "Mein.Name@abc.d",
+                "Mein.Name@abc.org",
+                "Mein.Name@abc.deeee",
+                "MeinName@abcorg",
+                "Mein.Name-xyzsde.deee"
+            ];
+
+            for(i = 0; i < testemails.length; i++)
+            {
+                if (isEmail(testemails[i])) {
+                    document.write(testemails[i].italics(), " ist vielleicht eine E-Mail-Adresse<br>");
+                } else {
+                    document.write(testemails[i].italics(), " ist sicher keine E-Mail-Adresse<br>");
+                }
+            }
+
+            document.write("<h1>Prüfen der Eingabe</h1>");
+
+            email = window.prompt("E-Mailadresse");
+
+            if(isEmail(email)) {
+                document.write("<strong>" + email + "</strong> ist vielleicht eine E-Mailadresse.")
+            } else {
+                document.write("<strong>" + email + "</strong> ist sicher keine E-Mailadresse.")
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
