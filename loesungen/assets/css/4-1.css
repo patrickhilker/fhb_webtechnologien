@@ -1,0 +1,25 @@
+body {
+
+    font-family: 'Arial', sans-serif;
+}
+
+p {
+
+    color: #003366;
+    font-size: 10pt;
+}
+
+h1, h2 {
+
+    color: #339966
+}
+
+h1 {
+
+    font-size: 16pt;
+}
+
+h2 {
+
+    font-size: 12pt;
+}
