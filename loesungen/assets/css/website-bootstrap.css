@@ -1,0 +1,23 @@
+#footer {
+
+    clear: both;
+    background-color: lightgrey;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+#content {
+
+    text-align: justify;
+}
+
+#right .termine ul {
+
+    padding: 0;
+    list-style-type: none;
+}
+
+#right .termine span {
+
+    font-weight: bold;
+}
