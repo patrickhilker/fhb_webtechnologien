@@ -9,7 +9,6 @@
 * 3.2
 * 3.6
 * 4.7
-* 4.10
 
 ### Aufgaben mit Anmerkungen
 * 3.10
