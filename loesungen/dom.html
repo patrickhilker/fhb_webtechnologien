@@ -12,6 +12,11 @@
                 width: 72px;
             }
 
+            figure {
+
+                margin: 0;
+            }
+
         </style>
 
     </head>
@@ -22,22 +27,29 @@
             <figcaption id="title"></figcaption>
         </figure>
 
+        <p>
+            <a href="javascript:seiteaendern();">DOM verändern</a>
+        </p>
+
         <script>
 
-            var title = prompt("Beschriftung des Bildes", "");
-            document.getElementById("title").innerHTML = title;
+            function seiteaendern() {
 
-            if(confirm("Rand einfügen?")) {
+                var title = prompt("Beschriftung des Bildes", "");
+                document.getElementById("title").innerHTML = title;
 
-                document.getElementById("emoji").style.borderWidth = "5px";
-                document.getElementById("emoji").style.borderColor = "red";
-                document.getElementById("emoji").style.borderRadius = "10px";
-                document.getElementById("emoji").style.borderStyle = "solid";
-            }
+                if (confirm("Rand einfügen?")) {
 
-            if(confirm("Bild tauschen?")) {
+                    document.getElementById("emoji").style.borderWidth = "5px";
+                    document.getElementById("emoji").style.borderColor = "red";
+                    document.getElementById("emoji").style.borderRadius = "10px";
+                    document.getElementById("emoji").style.borderStyle = "solid";
+                }
 
-                document.getElementById("emoji").src = "http://twemoji.maxcdn.com/2/72x72/1f422.png";
+                if (confirm("Bild tauschen?")) {
+
+                    document.getElementById("emoji").src = "http://twemoji.maxcdn.com/2/72x72/1f422.png";
+                }
             }
 
         </script>
