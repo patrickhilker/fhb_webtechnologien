@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Übung zum "DOM"</title>
+
+        <style>
+
+            #emoji {
+
+                width: 72px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <figure>
+            <img id="emoji" src="http://twemoji.maxcdn.com/2/72x72/1f60e.png">
+            <figcaption id="title"></figcaption>
+        </figure>
+
+        <script>
+
+            var title = prompt("Beschriftung des Bildes", "");
+            document.getElementById("title").innerHTML = title;
+
+            if(confirm("Rand einfügen?")) {
+
+                document.getElementById("emoji").style.borderWidth = "5px";
+                document.getElementById("emoji").style.borderColor = "red";
+                document.getElementById("emoji").style.borderRadius = "10px";
+                document.getElementById("emoji").style.borderStyle = "solid";
+            }
+
+            if(confirm("Bild tauschen?")) {
+
+                document.getElementById("emoji").src = "http://twemoji.maxcdn.com/2/72x72/1f422.png";
+            }
+
+        </script>
+
+    </body>
+</html>
+
+<!-- bildquelle: https://github.com/twitter/twemoji -->
